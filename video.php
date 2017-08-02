@@ -8,7 +8,7 @@
 *
 * @package   Kirby CMS
 * @author    Dennis Kerzig <hi@wottpal.com>
-* @version   0.1.0
+* @version   0.1.1
 *
 */
 
@@ -84,7 +84,7 @@ $kirby->set('tag', $tagname, [
       $width = $dimensions[0] . "px";
       $height = $dimensions[1] . "px";
     }
-    $size_style = "width:${height};height:${height};";
+    $size_style = "width:${width};height:${height};";
 
 
     // Embed <video>, but only if at least one video-file is given
