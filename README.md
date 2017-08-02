@@ -25,7 +25,7 @@ The last kirbytag for HTML5-videos you'll ever need. 👊
 
 ## 🐸 Installation
 
-Use [Kirby's CLI](https://github.com/getkirby/cli) and install the plugin via: `kirby plugin:install wottpal/kirby-lightbox-gallery` or place the repo manually under `site/plugins`.
+Use [Kirby's CLI](https://github.com/getkirby/cli) and install the plugin via: `kirby plugin:install wottpal/kirby-video` or place the repo manually under `site/plugins`.
 
 Include styles in your `<head>`) with `<?= css('assets/plugins/video/video.min.css') ?>`.<sup>1</sup>
 
@@ -83,7 +83,7 @@ If you don't use [kirby-dominant-color](https://github.com/iandoe/kirby-dominant
 
 *****
 
-<sup>1</sup><br>They also should have the same dimensions. I haven't tested anything else.
+<sup>1</sup>They also should have the same dimensions. I haven't tested anything else.<br>
 <sup>2</sup> Theoretically you can also specify these in `options` but if you also want to set a preset, these get overwritten by it.
 
 
@@ -138,6 +138,7 @@ Note: It's totally fine if you don't supply all of these. But at least one has t
 
 *The image-extensions which are used to find a fallback-image. The first found file is used an the others are ignored.*
 
+*****
 
 
 ## 🐻 Changelog
@@ -147,6 +148,8 @@ Have a look at the [releases page](https://github.com/wottpal/kirby-video/releas
 
 ## 🦁 Roadmap
 
+- [ ] Option to disable Preview-Color
+- [ ] Option to disable `<figure>` wrapper
 - [ ] Option to specify ratio + ratio-placeholders to prevent page-reflow when ratio is given. (like in ImageSet)
 - [ ] Doesn't seem to work with @bastianallgeier's `columns`-kirbytag 😢
 - [ ] Maybe use responsive fallback images
