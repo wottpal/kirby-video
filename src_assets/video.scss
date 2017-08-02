@@ -1,0 +1,36 @@
+/**
+ * Preview-Color Overlay for <video> elements.
+ */
+
+
+// Overlay video with colored placeholder.
+
+figure.html-video {
+  display: inline-block;
+  font-size: 0;
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+}
+
+img + .video-placeholder,
+video + .video-placeholder {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: opacity .5s .05s,visibility 0s .8s;
+
+  // Only show when JS is available
+  .no-js & {
+    display: none;
+  }
+}
+
+// Remove Placeholder when loaded
+[loaded="true"] + .video-placeholder {
+  opacity: 0;
+  visibility: hidden;
+}
