@@ -2,7 +2,7 @@
   "name": "video",
   "description": "Adds a kirbytag for embedding HTML5-videos with a variety of features.",
   "author": "Dennis Kerzig <hi@wottpal.com> (https://wottpal.com)",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "type": "kirby-plugin",
   "license": "MIT",
   "devDependencies": {

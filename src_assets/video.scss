@@ -1,26 +1,33 @@
 /**
- * Preview-Color Overlay for <video> elements.
+ * Basic-Styling & Preview-Color Overlay for video element and its wrapper.
  */
 
 
-// Overlay video with colored placeholder.
-
+// Basic properties for the figure
 figure.html-video {
   display: inline-block;
   font-size: 0;
   overflow: hidden;
   position: relative;
   max-width: 100%;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: inherit;
+  }
 }
 
-img + .video-placeholder,
-video + .video-placeholder {
+// Colored Placeholder
+figure.html-video:after {
+  content: "";
   position: absolute;
-  z-index: 10;
+  display: block;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
+  background: currentColor;
+  z-index: 10;
   transition: opacity .5s .05s,visibility 0s .8s;
 
   // Only show when JS is available
@@ -30,7 +37,7 @@ video + .video-placeholder {
 }
 
 // Remove Placeholder when loaded
-[loaded="true"] + .video-placeholder {
+figure.html-video[loaded="true"]:after {
   opacity: 0;
   visibility: hidden;
 }

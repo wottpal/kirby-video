@@ -95,6 +95,11 @@ By default videos are displayed in their native resolutions. But you can specify
 
 If you don't use [kirby-dominant-color](https://github.com/iandoe/kirby-dominant-color) you can manually specify the placeholder-color with the `color`-option. This also overwrites the dominant-color if given. If neither a dominiant-color is available nor you've specified `color` then `#fff` is used. To change this default see *Options*.
 
+#### No Figure-Wrapper
+
+By setting `figure` to false you can disable the video-element to be wrapped by a `<figure>`. Please note that without a wrapper color-placeholders are disabled.
+
+
 
 *****
 
@@ -155,6 +160,12 @@ Note: It's totally fine if you don't supply all of these. But at least one has t
 
 *****
 
+* `video.kirbytext.figure`  (default: `true`)
+
+*Globally prevent video-embeds to be wrapped by a `<figure>` element. Please note that without a wrapper color-placeholders are disabled.*
+
+*****
+
 
 # 🐻 Changelog
 
@@ -164,9 +175,9 @@ Have a look at the [releases page](https://github.com/wottpal/kirby-video/releas
 # 🦁 Roadmap
 
 - [ ] Option to disable Preview-Color
-- [ ] Option to disable `<figure>` wrapper
+- [x] Option to disable `<figure>` wrapper
 - [ ] Option to specify ratio + ratio-placeholders to prevent page-reflow when ratio is given. (like in ImageSet)
-- [ ] Doesn't seem to work with @bastianallgeier's `columns`-kirbytag 😢
+- [x] Make it work with @bastianallgeier's `columns`-kirbytag & markdown.extra enabled
 - [ ] Maybe use responsive fallback images
 
 

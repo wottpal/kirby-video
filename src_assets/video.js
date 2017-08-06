@@ -7,10 +7,13 @@ const video = (() => {
   /* Private Functions */
 
   /**
-   * Hides the placeholder by settig the loaded attribute as event-callback.
+   * Hides the placeholder by settig the loaded attribute as on the wrapper.
    */
   function hidePlaceholder(event) {
-    event.target.setAttribute('loaded', true)
+    const figureEl = event.target.parentNode
+    if (figureEl && figureEl.tagName.toLowerCase() == "figure") {
+      figureEl.setAttribute('loaded', true)
+    }
   }
 
   /**

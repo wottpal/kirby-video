@@ -8,7 +8,7 @@
 *
 * @package   Kirby CMS
 * @author    Dennis Kerzig <hi@wottpal.com>
-* @version   0.1.1
+* @version   0.2.0
 *
 */
 
@@ -18,17 +18,19 @@ $tagname = c::get('video.kirbytext.tagname', 'video');
 
 $kirby->set('tag', $tagname, [
   'attr' => [
-    'color',
+    'figure',
+    'width',
+    'height',
     'options',
     'preset',
-    'width',
-    'height'
+    'color',
   ],
   'html' => function($tag) use ($tagname) {
 
     // Options
     $name = $tag->attr($tagname);
     $class = c::get('video.kirbytext.class', '');
+    $use_figure = json_decode($tag->attr('figure', c::get('video.kirbytext.figure', true)));
     $width = $tag->attr('width');
     $height = $tag->attr('height');
     $given_color = $tag->attr('color');
@@ -78,28 +80,39 @@ $kirby->set('tag', $tagname, [
     if ($given_color && preg_match($pattern, $given_color)) $color = $given_color;
     if (!$color) $color = $default_color;
 
-
     // Determine Sizing (Use file-dimensions if neither w. nor h. are given)
     if (!$width && !$height) {
       $width = $dimensions[0] . "px";
       $height = $dimensions[1] . "px";
     }
-    $size_style = "width:${width};height:${height};";
+
+    // Building figure-wrapper styles from size & color
+    $figure_style = "color:$color;";
+    $figure_style .= $height ? "height:${height}" : "";
+    $figure_style .= $width ? "width:${width}" : "";
+
+    // If a wrapper is not used, apply the sizing on the <video> itself
+    $video_sizing = "width='100%'";
+    if (!$use_figure && ($width || $height)) {
+      $video_sizing = "";
+      $video_sizing .= $width ? " width='${width}' " : "";
+      $video_sizing .= $height ? " height='${height}' " : "";
+    }
 
 
     // Embed <video>, but only if at least one video-file is given
     if (!empty($videos)) {
 
       $video_html = tpl::load(__DIR__ . DS . 'template.php', [
-        'use_figure' => true,
+        'use_figure' => $use_figure,
+        'figure_style' => $figure_style,
+        'video_sizing' => $video_sizing,
         'class' => $class,
-        'size_style' => $size_style,
         'lazy' => strpos($options, 'lazyload') !== false,
         'options' => $options,
         'videos' => $videos,
         'video_types' => $video_types,
         'image' => $image,
-        'color' => $color,
       ], true);
 
       return html($video_html);

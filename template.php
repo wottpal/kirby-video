@@ -1,8 +1,8 @@
 
-<?php e($use_figure, "<figure class='html-video ${class}' style='${size_style}'>") ?>
-
+<?php e($use_figure, "<figure class='html-video ${class}' style='${figure_style}'>") ?>
+  
   <!-- Video -->
-  <video <?= $options ?> width="100%">
+  <video <?= $options ?> <?= $video_sizing ?>>
 
     <?php foreach($videos as $format => $file): ?>
       <source <?php e($lazy, 'data-') ?>src="<?= $file->url() ?>" type='<?= $video_types[$format] ?>'></source>
@@ -13,9 +13,5 @@
     <?php endif ?>
 
   </video>
-
-
-  <!-- Color Placeholder -->
-  <div class="video-placeholder" style="background: <?= $color ?>"></div>
 
 <?php e($use_figure, "</figure>") ?>
