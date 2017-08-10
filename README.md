@@ -17,6 +17,9 @@ The last [kirby](https://getkirby.com)tag for HTML5-videos you'll ever need. ğŸ‘
 * **Use Fallback Images or GIFs**
 * **Configurable & Customizable to it's core**
 
+
+![Demo of HTML5-Video Kirbytag](demo.gif)
+
 ***
 
 <sup>1</sup> Works out of the box with [kirby-dominant-color](https://github.com/iandoe/kirby-dominant-color) by @iandoe if fallback-image is provided<br>
@@ -25,9 +28,9 @@ The last [kirby](https://getkirby.com)tag for HTML5-videos you'll ever need. ğŸ‘
 
 # ğŸ¼ Demos
 
-*Coming Soon* ([submit your demo](https://twitter.com/wottpal))
+* [www.dennisadelmann.de](http://dennisadelmann.de/about)
+* **[Submit yours](https://twitter.com/wottpal)**
 
-![Demo of HTML5-Video Kirbytag](demo.gif)
 
 
 # ğŸ¸ Installation
