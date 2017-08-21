@@ -29,6 +29,7 @@ The last [kirby](https://getkirby.com)tag for HTML5-videos you'll ever need. ğŸ‘
 # ğŸ¼ Demos
 
 * [www.dennisadelmann.de](http://dennisadelmann.de/about)
+* [wottpal.com](http://wottpal.com/items/kirby-video) (my personal site)
 * **[Submit yours](https://twitter.com/wottpal)**
 
 
