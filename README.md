@@ -218,7 +218,7 @@ Just kidding. This plugin is totally free. Please consider following [me](https:
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/wottpal.svg?style=social&label=Follow)](https://twitter.com/wottpal)
 
-You can also check out one of my other Kirby-plugins:
+You can also check out one of [my other Kirby-plugins](https://wottpal.com/items/my-kirby-plugins):
 
 * [Lightbox-Gallery](https://github.com/wottpal/kirby-lightbox-gallery) - Easily inline beautifully aligned galleries with lightbox-support powered by PhotoSwipe.
 * [Anchor-Headings](https://github.com/wottpal/kirby-anchor-headings) - A kirby field-method which enumerates heading-elements, generates IDs for anchor-links and inserts custom markup based on your needs.
