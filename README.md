@@ -201,7 +201,7 @@ Have a look at the [releases page](https://github.com/wottpal/kirby-video/releas
 # 👨‍💻 Development
 For minification and transpilation I use [Gulp](http://gulpjs.com). Please note that all files under `assets/` are only the generated ones from `src_assets/`.
 
-```
+```bash
 # Install Dependencies
 npm i
 
