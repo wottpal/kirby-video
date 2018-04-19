@@ -49,12 +49,14 @@ Include scripts<sup>2</sup> before the end of your `</body>` with:
 <?= js('assets/plugins/video/video.min.js') ?>
 ```
 
-
 *****
 
 <sup>1</sup> Necessary for placeholder-color and ratio-sizing.<br>
 <sup>2</sup> Necessary for lazy-loading and img/gif fallback.
 
+#### Internet Explorer Support
+
+If you want to support IE you either need to polyfill [Array.from](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array/from) or rewrite some parts of `video.js`.
 
 # 🐨 Usage
 It's pretty straightforward to use this Kirbytag, the only rule to follow is basically: **Give all your source-files (and fallback-image) the same filename. Only the file-extensions should differ.**<sup>1</sup>
